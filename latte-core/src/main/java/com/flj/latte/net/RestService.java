@@ -44,10 +44,25 @@ public interface RestService {
     @DELETE
     Call<String> delete(@Url String url, @QueryMap WeakHashMap<String, Object> params);
 
+    /**
+     * 下载到内存，统一写到文件，这个方式容易造成一个问题，当文件过大的时候容易造成内存溢出；
+     * 加上@Streaming 这个注解的意思是边下载边写入文件，避免内存溢出造成的闪退等问题；
+     *
+     * @param url
+     * @param params
+     * @return
+     */
     @Streaming
     @GET
     Call<ResponseBody> download(@Url String url, @QueryMap WeakHashMap<String, Object> params);
 
+    /**
+     * 图解http 这本书
+     *
+     * @param url
+     * @param file
+     * @return
+     */
     @Multipart
     @POST
     Call<String> upload(@Url String url, @Part MultipartBody.Part file);

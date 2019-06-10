@@ -15,9 +15,9 @@ import okhttp3.MediaType;
 import okhttp3.RequestBody;
 
 /**
- * Created by 傅令杰 on 2017/4/2
+ * @author 傅令杰
+ * @date 2017/4/2
  */
-
 public final class RestClientBuilder {
 
     private final WeakHashMap<String, Object> PARAMS = new WeakHashMap<>();

@@ -14,9 +14,9 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.scalars.ScalarsConverterFactory;
 
 /**
- * Created by 傅令杰 on 2017/4/2
+ * @author 傅令杰
+ * @date 2017/4/2
  */
-
 public final class RestCreator {
 
 //    /**
@@ -31,7 +31,7 @@ public final class RestCreator {
 //    }
 
     /**
-     * 构建OkHttp
+     * 构建OkHttp。惰性加载
      */
     private static final class OKHttpHolder {
         private static final int TIME_OUT = 60;

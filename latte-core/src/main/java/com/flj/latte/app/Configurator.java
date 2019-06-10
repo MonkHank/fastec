@@ -18,6 +18,8 @@ import java.util.HashMap;
 import okhttp3.Interceptor;
 
 /**
+ * 记录 api 主机、activity、延迟加载、handler等等，并从记录中拿取
+ *
  * Created by 傅令杰 on 2017/3/29
  */
 

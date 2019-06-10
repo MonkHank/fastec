@@ -13,9 +13,9 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 /**
- * Created by 傅令杰 on 2017/4/2
+ * @author 傅令杰
+ * @date 2017/4/2
  */
-
 public final class RequestCallbacks implements Callback<String> {
 
     private final IRequest REQUEST;

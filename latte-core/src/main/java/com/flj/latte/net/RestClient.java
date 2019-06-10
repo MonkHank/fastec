@@ -21,9 +21,11 @@ import retrofit2.Call;
 import retrofit2.Callback;
 
 /**
- * Created by 傅令杰 on 2017/4/2
+ * 请求类
+ *
+ * @author 傅令杰
+ * @date 2017/4/2
  */
-
 public final class RestClient {
 
     private final WeakHashMap<String, Object> PARAMS;
@@ -115,6 +117,7 @@ public final class RestClient {
         }
 
         if (call != null) {
+            // 不需要在启动线程，后台会有线程管理
             call.enqueue(getRequestCallback());
         }
     }
@@ -164,7 +167,7 @@ public final class RestClient {
     }
 
     public final void download() {
-        new DownloadHandler(URL, PARAMS,REQUEST, DOWNLOAD_DIR, EXTENSION, NAME,
+        new DownloadHandler(URL, PARAMS, REQUEST, DOWNLOAD_DIR, EXTENSION, NAME,
                 SUCCESS, FAILURE, ERROR)
                 .handleDownload();
     }
