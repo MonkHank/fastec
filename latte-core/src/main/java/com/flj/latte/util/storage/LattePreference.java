@@ -8,9 +8,9 @@ import com.alibaba.fastjson.JSONObject;
 import com.flj.latte.app.Latte;
 
 /**
- * Created by 傅令杰 on 2017/4/22
+ * @author 傅令杰
+ * @date 2017/4/22
  */
-
 public final class LattePreference {
 
     /**
